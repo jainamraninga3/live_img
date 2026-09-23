@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patan Map Viewer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Patan-1 · View</h1>
+    <div class="info">
+      <span id="zoomLabel">100%</span>
+      <span id="coordLabel">x: –, y: –</span>
+    </div>
+  </header>
+
+  <main id="viewport" class="viewport">
+    <div id="loader" class="loader">
+      <div class="spinner"></div>
+      <p>Loading image…</p>
+    </div>
+    <div id="stage" class="stage">
+      <img id="mapImg" src="Patan1_boxed_preview.png" alt="Patan-1 aerial map" draggable="false" />
+    </div>
+
+    <div class="controls">
+      <button id="zoomIn" title="Zoom in (+)">+</button>
+      <button id="zoomOut" title="Zoom out (-)">−</button>
+      <button id="fitBtn" title="Fit to screen (0)">⤢</button>
+      <button id="fullBtn" title="Fullscreen (F)">⛶</button>
+    </div>
+
+    <div id="minimap" class="minimap">
+      <img id="miniImg" src="Patan1_boxed_preview.png" alt="" draggable="false" />
+      <div id="miniView" class="mini-view"></div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
